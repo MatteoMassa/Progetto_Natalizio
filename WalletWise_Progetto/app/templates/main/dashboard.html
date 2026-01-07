@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - WalletWise{% endblock %}
+
+{% block content %}
+<h2>Dashboard</h2>
+<p>Utente: <b>{{ username }}</b></p>
+
+<h3>Filtro per data (L3)</h3>
+<form method="get" action="{{ url_for('main.dashboard') }}">
+  <label>Dal</label>
+  <input type="date" name="start" value="{{ start }}">
+  <label>Al</label>
+  <input type="date" name="end" value="{{ end }}">
+  <button type="submit">Filtra</button>
+</form>
+
+<h3>Riepilogo (L3)</h3>
+<ul>
+  <li>Entrate: €{{ "%.2f"|format(income) }}</li>
+  <li>Uscite: €{{ "%.2f"|format(expense) }}</li>
+  <li><b>Saldo:</b> €{{ "%.2f"|format(balance) }}</li>
+</ul>
+
+<h3>Movimenti (L1 + L2)</h3>
+<table border="1" cellpadding="6">
+  <tr>
+    <th>Data</th>
+    <th>Tipo</th>
+    <th>Descrizione</th>
+    <th>Categoria</th>
+    <th>Importo</th>
+  </tr>
+  {% for t in transactions %}
+    <tr>
+      <td>{{ t.date }}</td>
+      <td>{{ t.type }}</td>
+      <td>{{ t.description }}</td>
+      <td>{{ t.category }}</td>
+      <td>€{{ "%.2f"|format(t.amount) }}</td>
+    </tr>
+  {% else %}
+    <tr><td colspan="5">Nessun movimento trovato.</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}

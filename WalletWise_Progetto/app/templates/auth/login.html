@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Login - WalletWise{% endblock %}
+
+{% block content %}
+<h2>Login</h2>
+
+<form method="post" action="{{ url_for('auth.login_action') }}">
+  <label>Username</label><br>
+  <input name="username" required><br><br>
+
+  <label>Password</label><br>
+  <input name="password" type="password" required><br><br>
+
+  <button type="submit">Entra</button>
+</form>
+{% endblock %}
