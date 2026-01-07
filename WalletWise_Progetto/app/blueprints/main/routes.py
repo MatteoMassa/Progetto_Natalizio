@@ -1,8 +1,8 @@
 from functools import wraps
 from flask import render_template, request, redirect, url_for, session, flash, current_app
 from . import main_bp
-from ...repositories.transaction_repository import TransactionRepository
-from ...repositories.category_repository import CategoryRepository
+from ...repositories.transaction_repositories import TransactionRepository
+from ...repositories.category_repositories import CategoryRepository
 
 def login_required(view):
     @wraps(view)

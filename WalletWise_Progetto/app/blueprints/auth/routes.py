@@ -1,7 +1,7 @@
 from flask import render_template, request, redirect, url_for, flash, session, current_app
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import auth_bp
-from ...repositories.user_repository import UserRepository
+from ...repositories.user_repositories import UserRepository
 
 def _user_repo() -> UserRepository:
     return UserRepository(current_app.config["DB_PATH"])
