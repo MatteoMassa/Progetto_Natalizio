@@ -71,22 +71,22 @@ walletwise/
 ├─ requirements.txt
 │
 └─ app/
-   ├─ __init__.py
+   ├─ init__.py
    ├─ db_init.py
    │
    ├─ repositories/
-   │  ├─ __init__.py
+   │  ├─ init__.py
    │  ├─ user_repository.py
    │  ├─ category_repository.py
    │  └─ transaction_repository.py
    │
    ├─ blueprints/
-   │  ├─ __init__.py
+   │  ├─ init__.py
    │  ├─ auth/
-   │  │  ├─ __init__.py
+   │  │  ├─ init__.py
    │  │  └─ routes.py
    │  └─ main/
-   │     ├─ __init__.py
+   │     ├─ init__.py
    │     └─ routes.py
    │
    └─ templates/
