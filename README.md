@@ -71,29 +71,29 @@ walletwise/
 ├─ requirements.txt
 │
 └─ app/
-   ├─ init__.py
-   ├─ db_init.py
-   │
-   ├─ repositories/
-   │  ├─ init__.py
-   │  ├─ user_repository.py
-   │  ├─ category_repository.py
-   │  └─ transaction_repository.py
-   │
-   ├─ blueprints/
-   │  ├─ init__.py
-   │  ├─ auth/
-   │  │  ├─ init__.py
-   │  │  └─ routes.py
-   │  └─ main/
-   │     ├─ init__.py
-   │     └─ routes.py
-   │
-   └─ templates/
-      ├─ base.html
-      ├─ auth/
-      │  ├─ login.html
-      │  └─ register.html
-      └─ main/
-         ├─ dashboard.html
-         └─ add_transaction.html
+├─ init.py
+├─ db_init.py
+│
+├─ repositories/
+│ ├─ init.py
+│ ├─ user_repository.py
+│ ├─ category_repository.py
+│ └─ transaction_repository.py
+│
+├─ blueprints/
+│ ├─ init.py
+│ ├─ auth/
+│ │ ├─ init.py
+│ │ └─ routes.py
+│ └─ main/
+│ ├─ init.py
+│ └─ routes.py
+│
+└─ templates/
+├─ base.html
+├─ auth/
+│ ├─ login.html
+│ └─ register.html
+└─ main/
+├─ dashboard.html
+└─ add_transaction.html
